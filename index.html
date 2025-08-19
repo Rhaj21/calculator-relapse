@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      
+
+    </style>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <audio id="myAudio" src="MANNOMOVE.mp3"></audio>
+    <div id="calculator">
+      <input id="display" readonly>
+      <div id="keys">
+        <button onclick="displayInput('1')">1</button>
+        <button onclick="displayInput('2')">2</button>
+        <button onclick="displayInput('3')">3</button>
+        <button onclick="displayInput('4')">4</button>
+        <button onclick="displayInput('5')">5</button>
+        <button onclick="displayInput('6')">6</button>
+        <button onclick="displayInput('7')">7</button>
+        <button onclick="displayInput('8')">8</button>
+        <button onclick="displayInput('9')">9</button>
+        <button onclick="displayInput('0')">0</button>
+        <button onclick="addDot('')">.</button>
+        
+        <button class="operators" onclick="clearDisplay()">C</button>
+        <button class="operators"  onclick="backSpace()">⌫</button>
+
+        <button class="operators" onclick="addOperator('+')">+</button>
+        <button class="operators" onclick="addOperator('-')">-</button>
+        <button class="operators" onclick="addOperator('*')">*</button>
+        <button class="operators" onclick="addOperator('/')">/</button>
+        
+        <button id="playBtn" class="operators" onclick="
+        if (isBusy) return;
+        
+        const audio = document.getElementById('myAudio');
+        audio.play();
+     
+        const display = document.getElementById('display');
+        display.value = '';
+        calculate()
+        ">=</button>
+      </div>
+    </div>
+
+    <script src="script.js">
+      
+
+      
+    </script>
+  </body>
+</html>
